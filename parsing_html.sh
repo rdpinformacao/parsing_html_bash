@@ -126,6 +126,7 @@ __Download__() {
 
     printf "\n${GREEN}[+] Download do site...${END}\n\n"
     if wget -q -c --show-progress $ARG01 -O FILE; then
+    if wget -q -c --progress=bar $ARG01 -O FILE; then
         printf "\n${GREEN}[+] Download completo!${END}\n\n"
     else
         printf "\n${RED}[+] Falha no download!${END}\n\n"
